@@ -5,14 +5,15 @@
 }
 
 <h2>Edit</h2>
+<form asp-action="Edit">
+    <label asp-for="ID"></label>
+    <input asp-for="ID" />
 
-<label asp-for="ID"></label>
-<input asp-for="ID" />
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" />
 
-<label asp-for="FirstName"></label>
-<input asp-for="FirstName" />
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" />
 
-<label asp-for="LastName"></label>
-<input asp-for="LastName" />
-
-<input type="submit" value="Save my data" />
+    <input type="submit" value="Save my data" />
+</form>

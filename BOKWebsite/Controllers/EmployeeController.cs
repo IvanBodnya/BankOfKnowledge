@@ -29,6 +29,14 @@ namespace BOKWebsite.Controllers
             return View(employeeModel);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("ID,FirstName,LastName")] EmployeeModel employeeModel)
+        {
+            _context.Update(employeeModel);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
