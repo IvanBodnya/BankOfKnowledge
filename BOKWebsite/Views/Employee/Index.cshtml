@@ -1,7 +1,21 @@
-﻿@page
-@model BOKWebsite.Models.EmployeeModel
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<BOKWebsite.Models.EmployeeModel>
 @{
-    
+    //ViewData["Title"] = "Index";
 }
 
 <h2>Index page was finally found! :-)</h2>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        </tr>
+    }
+</table>

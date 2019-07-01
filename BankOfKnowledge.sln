@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOKWebsite", "BOKWebsite\BOKWebsite.csproj", "{C36ACF38-087F-45C2-80A2-114429FFE98C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BOKDatabase", "BOKDatabase\BOKDatabase.sqlproj", "{BEDDF975-9139-41EB-B416-3D639EA85934}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C36ACF38-087F-45C2-80A2-114429FFE98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36ACF38-087F-45C2-80A2-114429FFE98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36ACF38-087F-45C2-80A2-114429FFE98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36ACF38-087F-45C2-80A2-114429FFE98C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDDF975-9139-41EB-B416-3D639EA85934}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0655CE2C-6E20-4721-9DF0-FF4A64D53644}
+	EndGlobalSection
+EndGlobal
