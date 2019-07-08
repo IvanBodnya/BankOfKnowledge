@@ -16,6 +16,26 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
             </td>
+            <td>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="@Model.FirstOrDefault().ID" value="@item.ID"/>
+                    <input type="submit" value="Delete ID" />
+                </form>
+            </td>
         </tr>
     }
 </table>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="@Model.FirstOrDefault().ID"></label>
+        <input asp-for="@Model.FirstOrDefault().ID" />
+        <label asp-for="@Model.FirstOrDefault().FirstName"></label>
+        <input asp-for="@Model.FirstOrDefault().FirstName" />
+        <label asp-for="@Model.FirstOrDefault().LastName"></label>
+        <input asp-for="@Model.FirstOrDefault().LastName" />
+    </div>
+    <div>
+        <input type="submit" value="Create new entry in DB" />
+    </div>
+</form>

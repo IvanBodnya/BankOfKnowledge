@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BOKWebsite.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace BOKWebsite.Controllers
 {
@@ -33,6 +34,27 @@ namespace BOKWebsite.Controllers
         public async Task<IActionResult> Edit(int id, [Bind("ID,FirstName,LastName")] EmployeeModel employeeModel)
         {
             _context.Update(employeeModel);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("ID,FirstName,LastName")] EmployeeModel employeeModel)
+        {
+            _context.Employee.Add(employeeModel);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        //[Route("[controller]")]
+        public async Task<IActionResult> DeleteConfirmed([Bind("ID")] EmployeeModel employee)
+        {
+            EmployeeModel employeeModel = await _context.Employee.FindAsync(employee.ID);
+            _context.Employee.Remove(employeeModel);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
