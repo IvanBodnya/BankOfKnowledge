@@ -49,9 +49,7 @@ namespace BOKWebsite.Controllers
         }
 
         [HttpPost]
-        [ActionName("Delete")]
-        //[Route("[controller]")]
-        public async Task<IActionResult> DeleteConfirmed([Bind("ID")] EmployeeModel employee)
+        public async Task<IActionResult> Delete([Bind("ID")] EmployeeModel employee)
         {
             EmployeeModel employeeModel = await _context.Employee.FindAsync(employee.ID);
             _context.Employee.Remove(employeeModel);

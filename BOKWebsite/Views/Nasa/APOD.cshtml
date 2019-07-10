@@ -1,0 +1,30 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BOKWebsite.Models.NasaApod
+@{
+}
+
+<h2>APOD</h2>
+
+<table>
+    <tr>
+        <td>@Model.Date</td>
+    </tr>
+    <tr>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <td>@Model.Explanation</td>
+    </tr>
+    <tr>
+        <td>@Model.Media_type</td>
+    </tr>
+    <tr>
+        <td>@Model.Service_version</td>
+    </tr>
+    <tr>
+        <td>
+        <img src="@Model.Hdurl" width="500"/>
+        </td>
+    </tr>
+
+</table>

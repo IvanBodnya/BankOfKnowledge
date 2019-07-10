@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BOKWebsite.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using BOKWebsite.Controllers;
 
 namespace BOKWebsite
 {
@@ -27,6 +28,8 @@ namespace BOKWebsite
 
             services.AddDbContext<EmployeeContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("BOKDatabaseContext")));
+
+            services.AddScoped<NasaApiController, NasaApiController>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -43,10 +46,12 @@ namespace BOKWebsite
                     template: "{controller=Employee}/{action=Index}/{id?}");
             });
 
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
+            app.UseAuthentication();
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("MVC was not found! :-)");
+            });
         }
     }
 }
