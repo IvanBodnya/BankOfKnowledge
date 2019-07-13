@@ -10,6 +10,8 @@ using BOKWebsite.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using BOKWebsite.Controllers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace BOKWebsite
 {
@@ -24,6 +26,32 @@ namespace BOKWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+
+            //Identity services
+
+
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddRoles<IdentityRole>()
+            //    .AddEntityFrameworkStores<EmployeeContext>();
+
+            //services.Configure<IdentityOptions>(options =>
+            //{
+            //    options.Password.RequireDigit = true;
+            //    options.Password.RequireLowercase = true;
+            //    options.Password.RequiredLength = 6;
+
+            //    options.User.AllowedUserNameCharacters =
+            //    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+            //});
+
+            //add MVC
             services.AddMvc();
 
             services.AddDbContext<EmployeeContext>(options =>
@@ -38,6 +66,8 @@ namespace BOKWebsite
             //{
             //    app.UseDeveloperExceptionPage();
             //}
+            app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
@@ -45,8 +75,6 @@ namespace BOKWebsite
                     name: "default",
                     template: "{controller=Employee}/{action=Index}/{id?}");
             });
-
-            app.UseAuthentication();
 
             app.Run(async (context) =>
             {

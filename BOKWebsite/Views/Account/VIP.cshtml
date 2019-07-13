@@ -1,0 +1,34 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BOKWebsite.Models.VIPModel
+@{
+}
+
+<h2>VIP page :-)</h2>
+
+<table>
+    <tr>
+        <td>@Model.OwnerID</td>
+        <td>@Model.Email</td>
+        <td>@Model.Password</td>
+    </tr>
+</table>
+
+<form>
+    <h4>Create a new account</h4>
+
+    <label asp-for="@Model.Password"></label>
+    <input asp-for="@Model.Email" />
+
+    <label asp-for="@Model.Password"></label>
+    <input asp-for="@Model.Password" />
+
+    <input type="submit" value="Create new account" />
+</form>
+
+<div>
+    Hello @User.Identity.Name
+    <form asp-action="Logout">
+        <input type="submit" value="Logout from system"/>
+    </form>
+</div>
+

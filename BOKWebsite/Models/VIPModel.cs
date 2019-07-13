@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BOKWebsite.Models
 {
-    public class RegisterModel
+    public class VIPModel
     {
         public string OwnerID { get; set; }
         [Display(Name = "Email address")]

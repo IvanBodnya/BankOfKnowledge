@@ -18,7 +18,7 @@
             </td>
             <td>
                 <form asp-action="Delete">
-                    <input type="hidden" asp-for="@Model.FirstOrDefault().ID" value="@item.ID"/>
+                    <input type="hidden" asp-for="@Model.FirstOrDefault().ID" value="@item.ID" />
                     <input type="submit" value="Delete ID" />
                 </form>
             </td>
@@ -47,3 +47,7 @@
 <div>
     @Html.ActionLink("Go to Register page", "Register", "Account")
 </div>
+<div>
+    @Html.ActionLink("Go to Login page", "Login", "Account")
+</div>
+
