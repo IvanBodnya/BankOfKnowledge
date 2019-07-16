@@ -1,0 +1,19 @@
+﻿.index_entry_board {
+    display: table;
+    font-size: 20px;
+    width: 100%;
+}
+
+.index_entry_text {
+    display: table-cell;
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.index_entry_image {
+    display: table-cell;
+    width: 50%;
+    text-align: right;
+    padding: 20px;
+}
