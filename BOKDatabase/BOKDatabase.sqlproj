@@ -64,8 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Employee.sql" />
+    <Build Include="dbo\Tables\Posting.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\PublishDB\BOKDatabase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BOKDatabase.refactorlog" />
   </ItemGroup>
 </Project>

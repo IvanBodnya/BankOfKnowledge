@@ -66,6 +66,8 @@ namespace BOKWebsite
             //{
             //    app.UseDeveloperExceptionPage();
             //}
+            app.UseStaticFiles();
+
             app.UseCookiePolicy();
             app.UseAuthentication();
 

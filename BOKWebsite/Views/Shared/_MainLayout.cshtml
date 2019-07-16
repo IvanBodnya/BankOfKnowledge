@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my first asp net core website!</title>
+    <link href="~/css/MainStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>WELCOME TO MY NEW WEB SITE :-)</h1>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            &copy; @DateTime.Now.Year My first website
+        </div>
+    </div>
+</body>
+</html>

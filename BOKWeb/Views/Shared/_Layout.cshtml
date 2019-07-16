@@ -1,0 +1,23 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/LayoutStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a asp-action="Index" asp-controller="Main">Bank Of Knowledge</a>
+        </div>
+        <div class="header-right">
+            <a class="active" href="#">Search</a>
+        </div>
+    </div>
+    <div id="main">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        &copy; Developed for personal use only. by Ivan Bodnya.
+    </div>
+</body>
+</html>
