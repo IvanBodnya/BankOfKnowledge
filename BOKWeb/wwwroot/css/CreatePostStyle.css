@@ -1,0 +1,32 @@
+﻿.create_post_form {
+    display: table;
+    width: 100%;
+}
+
+.create_post_form input {
+    display: table-cell;
+    margin: 0 0 10px 0;
+}
+
+.create_post_form label {
+    display: table-cell;
+}
+
+.create_post_form textarea{
+    resize: none;
+    width: 50%;
+}
+
+.create_post_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.create_post_button:hover {
+    background-color: #5faef8;
+    color: white;
+}

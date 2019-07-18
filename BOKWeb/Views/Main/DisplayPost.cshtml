@@ -1,0 +1,25 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BOKWeb.Models.PostingModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/DisplayPostStyle.css" rel="stylesheet" type="text/css" />
+
+<div>
+    <a asp-action="Index">
+        <input class="return_to_index_button" type="button" value="Back" />
+    </a>
+</div>
+<div class="post_item">
+    <h2>Post Title: @Model.Title</h2>
+    <p>Post Author: @Model.Author</p>
+    <p>min to read: ~@Model.MinToRead</p>
+    <p>Date Created: @Model.DateCreated</p>
+    <textarea>Description: @Model.Description</textarea>
+</div>
+<div class="edit_button">
+    <form asp-action="EditPost">
+        <input asp-for="@Model.Id" type="hidden" value="@Model.Id" />
+        <input class="edit_button" type="submit" value="Edit" />
+    </form>
+</div>

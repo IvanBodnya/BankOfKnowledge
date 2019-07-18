@@ -1,4 +1,5 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<BOKWeb.Models.PostingModel>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -13,6 +14,36 @@
     </div>
 </div>
 
-<div class="create_post">
-    
+<div class="post_area">
+    <div class="create_post">
+        <a asp-action="CreatePost">
+            <input class="create_post_button" type="button" value="Create Post" />
+        </a>
+        
+    </div>
+
+    <div class="recent_posts">
+        @foreach (var post in Model)
+        {
+            <div class="recent_post_item">
+                <h2>Post Title: @post.Title</h2>
+                <p>Post Author: @post.Author</p>
+                <p>min to read: ~@post.MinToRead</p>
+                <p>Date Created: @post.DateCreated</p>
+                <p>Description: @post.Description</p>
+            </div>
+            <div class="recent_post_item_display">
+                <form asp-action="DisplayPost">
+                    <input asp-for="@Model.FirstOrDefault().Id" type="hidden" value="@post.Id" />
+                    <input class="recent_post_display_button" type="submit" value="Show Post" />
+                </form>
+            </div>
+            <div class="recent_post_item_delete">
+                <form asp-action="DeletePost">
+                    <input asp-for="@Model.FirstOrDefault().Id" type="hidden" value="@post.Id" />
+                    <input class="recent_post_delete_button" type="submit" value="Delete Post" />
+                </form>
+            </div>
+        }
+    </div>
 </div>

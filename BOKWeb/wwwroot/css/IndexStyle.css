@@ -1,4 +1,5 @@
-﻿.index_entry_board {
+﻿/*BOARD AREA*/
+.index_entry_board {
     display: table;
     font-size: 20px;
     width: 100%;
@@ -16,4 +17,82 @@
     width: 50%;
     text-align: right;
     padding: 20px;
+}
+
+/*POST AREA*/
+.post_area {
+    display: table;
+    width: 100%;
+    font-size: 20px;
+}
+
+.recent_posts {
+    display: table-cell;
+    width: 50%;
+}
+
+.create_post {
+    display: table-cell;
+    width: 50%;
+}
+
+.create_post_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.create_post_button:hover {
+    background-color: #5faef8;
+    color: white;
+}
+
+.recent_post_item p {
+    font-size: 20px;
+    border-bottom: #a6acb3;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    overflow: hidden;
+    width: 500px;
+}
+
+input.recent_post_delete_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+input.recent_post_delete_button:hover {
+    background-color: #5faef8;
+    color: white;
+}
+
+input.recent_post_display_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+input.recent_post_display_button:hover {
+    background-color: #5faef8;
+    color: white;
+}
+
+.recent_post_item_display {
+    text-align: left;
+    display: inline-block;
+}
+
+.recent_post_item_delete {
+    text-align: right;
+    display: inline-block;
 }

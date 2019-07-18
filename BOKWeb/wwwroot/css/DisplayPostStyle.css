@@ -1,0 +1,37 @@
+﻿.return_to_index_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.return_to_index_button:hover {
+    background-color: #5faef8;
+    color: white;
+}
+
+.edit_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+    display: inline-block;
+}
+
+    .edit_button:hover {
+        background-color: #5faef8;
+        color: white;
+    }
+
+.post_item p {
+    font-size: 20px;
+    border-bottom: #a6acb3;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    overflow: hidden;
+    width: 500px;
+}

@@ -1,14 +1,26 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BOKWeb.Models.PostingModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link href="~/css/CreatePostStyle.css" rel="stylesheet" type="text/css" />
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    
-</head>
-<body>
-</body>
-</html>
+<form class="create_post_form" asp-action="CreatePost">
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label asp-for="Author"></label>
+        <input asp-for="Author" />
+    </div>
+    <div>
+        <label asp-for="MinToRead"></label>
+        <input asp-for="MinToRead" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" rows="25" cols="25" placeholder="Put the post details here"></textarea>
+    </div>
+    <input class="create_post_button" type="submit" value="Create new post"/>
+</form>
