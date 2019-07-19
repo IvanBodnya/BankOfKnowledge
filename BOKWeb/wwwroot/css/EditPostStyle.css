@@ -6,15 +6,21 @@
     .edit_post_form input {
         display: table-cell;
         margin: 0 0 10px 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+        font-size: 15px;
     }
 
     .edit_post_form label {
         display: table-cell;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
     }
 
     .edit_post_form textarea {
         resize: none;
         width: 50%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+        font-size: 15px;
     }
 
 .edit_post_button {
@@ -28,6 +34,20 @@
 }
 
     .edit_post_button:hover {
+        background-color: #5faef8;
+        color: white;
+    }
+
+.return_to_index_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+    .return_to_index_button:hover {
         background-color: #5faef8;
         color: white;
     }

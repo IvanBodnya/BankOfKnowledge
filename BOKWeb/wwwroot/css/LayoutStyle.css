@@ -1,29 +1,45 @@
 ﻿.header {
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
+    display: table;
+    width: 100%;
 }
 
 .header a {
         color: black;
-        padding: 12px;
+        padding: 10px 20px;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 25px;
         border-radius: 4px;
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    float: left;
-    position: relative;
+    display: table-cell;
+    text-align: left;
+    width: 33.3%;
+    vertical-align: middle;
 }
 
-        /* Change the background color on mouse-over */
-        .header a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+.logo img{
+    width: 150px;
+}
+
+.site_name {
+    display: table-cell;
+    text-align: center;
+    width: 33.3%;
+    vertical-align: middle;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+}
+
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
         /* Style the active/current link*/
         .header a.active {
@@ -33,7 +49,10 @@
 
 /* Float the link section to the right */
 .header-right {
-    float: right;
+    display: table-cell;
+    text-align: right;
+    width: 33.3%;
+    vertical-align: middle;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

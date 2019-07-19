@@ -33,7 +33,6 @@ namespace BOKWeb.Controllers
         public async Task<IActionResult> CreatePosting([Bind("Title,Author,MinToRead,Description")] PostingModel postingModel)
         {
             postingModel.DateCreated = DateTime.Now;
-            //postingModel.Id = await Task.Run(() => _context.PostingModels.ToList().Count) + 1;
 
             _context.PostingModels.Update(postingModel);
             await _context.SaveChangesAsync();

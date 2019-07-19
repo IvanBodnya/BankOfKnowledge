@@ -30,3 +30,17 @@
     background-color: #5faef8;
     color: white;
 }
+
+.return_to_index_button {
+    transition-duration: 0.4s;
+    background-color: #2d80f3;
+    color: black;
+    border: hidden;
+    font-size: 18px;
+    padding: 8px;
+}
+
+    .return_to_index_button:hover {
+        background-color: #5faef8;
+        color: white;
+    }

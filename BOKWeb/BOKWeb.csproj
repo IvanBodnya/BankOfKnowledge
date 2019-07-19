@@ -15,4 +15,8 @@
     <ProjectReference Include="..\BOKDatabase\BOKDatabase.sqlproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
