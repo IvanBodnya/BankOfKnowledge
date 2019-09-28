@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Secure Page!";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>You've been authenticated! You can see the secure page. Congratulations, it works!</p>
+
+@* Info about account that has been successfully singed in *@
+<pre>
+Authenticated: @ViewData["isAuthenticated"]
+Email Address: @ViewData["email"]
+BEMS ID: @ViewData["bems"]
+Name: @ViewData["name"]
+</pre>

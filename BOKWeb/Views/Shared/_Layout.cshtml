@@ -1,26 +1,33 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <link href="~/css/LayoutStyle.css" rel="stylesheet" type="text/css" />
+    <title>@ViewData["Title"]</title>
 </head>
 <body>
+    @* Top Menu *@
     <div class="header">
         <div class="logo">
             <img src="~/images/boeing_logo.png" />
         </div>
         <div class="site_name">
-            <a asp-action="Index" asp-controller="Main">Bank Of Knowledge</a>
+            <a asp-action="Index" asp-controller="Posting">Bank Of Knowledge</a>
         </div>
         <div class="header-right">
+            <a asp-action="Secure">Secure page</a>
             <a class="active" href="#">Search</a>
         </div>
     </div>
+
+    @* Page body *@
     <div id="main">
         @RenderBody()
     </div>
+
+    @* Page footer *@
     <div class="footer">
         &copy; Developed for personal use only.
     </div>
+
 </body>
 </html>
